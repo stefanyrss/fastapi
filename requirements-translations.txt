@@ -1,1 +1,8 @@
 pydantic-ai==0.0.15
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def process_data(input_data):
+    # Código pesado que pode ser otimizado
+    return input_data.lower()
+
